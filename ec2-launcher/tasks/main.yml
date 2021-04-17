@@ -1,0 +1,21 @@
+---
+# tasks file for ec2-launcher
+
+- name: Launching AWS EC2 Instance
+  ec2:
+          image: "{{ image_id }}"
+          instance_type: "{{instance_type}}"
+          region: "{{ region }}"
+          key_name: "{{ key }}"
+          wait: yes
+          count: 1
+          state: present
+          vpc_subnet_id: "{{ vpc_subnet_id }}"
+          group_id: "{{ security_group_id }}"
+          instance_tags:
+                  name: "{{ item }}"
+          assign_public_ip: yes
+  loop:
+          - "K8s_Master"
+          - "K8s_Slave1"
+          - "K8s_Slave2"

@@ -1,0 +1,5 @@
+- hosts: localhost
+
+  roles:
+          - name: Provisining of EC2 Instances
+            role: ec2-launcher

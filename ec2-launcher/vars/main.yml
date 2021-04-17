@@ -1,0 +1,15 @@
+---
+# vars file for ec2-launcher
+
+image_id: "ami-0bcf5425cdc1d8a85"
+instance_type: "t2.micro"
+region: "ap-south-1"
+key: "Ansible_Task_key"
+vpc_subnet_id: "subnet-064f536e"
+security_group_id: "sg-08d4ba33eea843b3a"
+#aws_access_key: "enter access key"
+#aws_secret_key: "enter secret key"
+#array_list:
+#        - K8S_Master
+#        - K8S_Slave1
+#        - K8S_Slave2   
